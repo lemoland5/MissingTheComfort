@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Sohne';
+    src: url('https://assets.website-files.com/657faa5b526b40c8ee10c543/65806a3203a1ce73e110d626_TestS%C3%B6hne-Buch.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Sohne';
+    src: url('https://assets.website-files.com/657faa5b526b40c8ee10c543/65806a32faade09e489d1eb5_TestS%C3%B6hne-Kr%C3%A4ftig.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Sohne';
+    src: url('https://assets.website-files.com/657faa5b526b40c8ee10c543/6580709defc54eb16dbe5e0f_TestS%C3%B6hne-Leicht.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+  
+*{
+    box-sizing: border-box;
+    font-family: 'Sohne';
+}
+  
+
+body, html{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.videoPreview{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+
+.sectionGrid{
+    grid-template-columns: 63% 37%;
+    grid-template-areas: "img div" ;
+    background-color: #666;
+
+}
+
+.sectionGrid > .sectionText > header{
+    color: #000;
+}
+
+.sectionGridReverse{
+    grid-template-columns: 63% 37%;
+    grid-template-areas: "div img" ;
+    background-color: #000;
+}
+
+.sectionGridReverse > .sectionText > header{
+    color: #666;
+}
+
+.sectionImgText{
+    width: 100%;
+    height: 90vh;
+    color: #fff;
+    display: grid;
+}
+
+.sectionImgText> img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sectionText{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sectionText > header{
+    padding: 2rem;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+.sectionText > p{
+    width: 35rem;
+    font-size: 1.2rem;
+    padding: 5%;
+}
