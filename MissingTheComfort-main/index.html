@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Missing the Comfort</title>
+    <script src="https://unpkg.com/lenis@1.0.44/dist/lenis.min.js"></script>
+    
+    
+</head>
+<body>
+
+ 
+        
+    <section class="videoPreview">
+        <img class="videoImg" src="./img/life/cinema.png" alt="">
+    </section>
+
+    <div class="sectionImgText sectionGrid">
+        <img src="./img/life/sylwesterussy.jpg" alt="">
+        <div class="sectionText">
+            <header>mx camera bike</header>
+            <p>Designed to capture dynamic shots with precision and agility, this cutting-edge camera bike redefines the art of cinematography.</p>
+        </div>
+
+    </div>
+
+    <div class="sectionImgText sectionGridReverse">
+        <div class="sectionText">
+            <header>mx camera bike</header>
+            <p>
+                Kieran's passion extends beyond the screen to the creation of custom bikes. Meticulously crafted and infused with adrenaline, each custom bike is a testament to his dedication to the world of motorcycles. Experience the fusion of performance and artistry.
+            </p>
+        </div>
+        <img src="./img/life/isis.jpg" alt="">
+    </div>
+
+
+
+
+
+    <script defer>
+
+
+        // lenis.easing = (x) => {
+        //     const c4 = (2 * Math.PI) / 3;
+
+        //     return x === 0
+        //     ? 0
+        //     : x === 1
+        //     ? 1
+        //     : Math.pow(2, -10 * x) * Math.sin((x * 10 - 0.75) * c4) + 1;
+        // }
+
+        const lenis = new Lenis({
+    duration: 1.2,
+
+    easing: function(x){
+        let val =  x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
+        return val + 0.2;
+    },
+
+    direction: "vertical",
+    gestureDirection: "vertical",
+    smooth: true,
+    smoothTouch: false,
+    touchMultiplier: 2,
+        });
+
+        lenis.on('scroll', (e) => {
+        console.log(e)
+        })
+
+        function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+        // const lenis = new Lenis()
+
+        // lenis.on('scroll', (e) => {
+        // console.log(e)
+        // })
+
+        // lenis.on('scroll', ScrollTrigger.update)
+
+        // gsap.ticker.add((time)=>{
+        // lenis.raf(time * 1000)
+        // })
+
+        // gsap.ticker.lagSmoothing(0)
+    </script> 
+
+
+
+</body>
+</html>
