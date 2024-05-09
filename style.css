@@ -23,16 +23,18 @@
 *{
     box-sizing: border-box;
     font-family: 'Sohne';
+    scroll-behavior: smooth;
 }
   
 
 body, html{
     margin: 0;
-    scroll-behavior: smooth;
+
 }
 
 .videoPreview{
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     background-color: #000;
@@ -61,7 +63,7 @@ body, html{
 
 .sectionImgText{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     color: #fff;
     display: grid;
 }
@@ -82,12 +84,135 @@ body, html{
 .sectionText > header{
     padding: 2rem;
     text-transform: uppercase;
-    font-size: 3.5rem;
+    font-size: 3.5vw;
     font-weight: 500;
 }
 
 .sectionText > p{
-    width: 35rem;
-    font-size: 1.2rem;
+    width: 70%;
+    font-size: 1.3vw;
     padding: 5%;
 }
+
+.sectionTextHigh{
+    position: relative;
+    height: 140vh;
+    background-color: #666;
+    text-transform: uppercase;
+
+    padding-left: 10vw;
+    padding-top: 10vw;
+}
+
+.sectionTextHigh > header{
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 500;
+
+    width: 55%;
+}
+
+.sectionTextHigh > p{
+    position: absolute;
+    width: 20%;
+
+    left: 15% ;
+    bottom: 17%;
+
+    font-size: 1vw;
+
+    font-weight: 400;
+}
+
+.sectionTextHigh > img{
+    position: absolute;
+        
+    bottom: 10%;
+    left: 50%;
+
+    width: 20vw;
+    aspect-ratio: 1/1;
+}
+
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slides-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none; /* Firefox */
+
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+  }
+  
+  .slide-arrow {
+    position: absolute;
+    display: flex;
+
+    top: calc(50% - 5rem);
+
+    bottom: 0;
+    height: 10rem;
+    background-color: white;
+    border: none;
+    width: 4rem;
+    font-size: 3rem;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 100ms;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slide-arrow:hover,
+  .slide-arrow:focus {
+    opacity: 1;
+  }
+  
+  #slide-arrow-prev {
+    left: 0;
+    padding-left: 0.25rem;
+    border-radius: 0 2rem 2rem 0;
+  }
+  
+  #slide-arrow-next {
+    right: 0;
+    padding-left: 0.75rem;
+    border-radius: 2rem 0 0 2rem;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
+  }
+  
+  .slide:nth-child(1) {
+    background-color: #49b293;
+  }
+  
+  .slide:nth-child(2) {
+    background-color: #b03532;
+  }
+  
+  .slide:nth-child(3) {
+    background-color: #6a478f;
+    margin: 0;
+  }
+  
+  .slide:nth-child(4) {
+    background-color: #da6f2b;
+  }
