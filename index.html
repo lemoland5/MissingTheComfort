@@ -9,13 +9,17 @@
     
     <script defer src="./scroll.js"></script>
     <script defer src="./carousel.js"></script>
+    <script defer src="./select.js"></script>
     
     
 </head>
 <body>
         
     <section class="videoPreview">
-        <img class="videoImg" src="./img/life/cinema.png" alt="">
+        <video controls width="100%" autoplay muted loop>
+            <source src="./vid/trailer.webm" type="video/webm" />
+          
+          </video>
     </section>
 
 
@@ -29,6 +33,47 @@
             <p>I've been listening to Pearl Jam lately. My father has been a fan since his teenage years, but for me they didn't seem like anything special. My opinion changed when I recently heard the song <i>Jeremy</i> from their first album - <i>Ten</i>.</p>
 
     </div>
+
+    <div class="imgGridWrapper">
+        <header>
+            The very <br> 
+            best 
+        </header>
+        <div class="sectionImgGrid">
+
+            <a href="https://www.youtube.com">
+                <img src="./img/covers/pinkerton.png" alt="">
+            </a>
+    
+            <a href="https://www.youtube.com">
+                <img src="./img/covers/in utero 4k 1.png" alt="">
+            </a>
+    
+            <a href="https://www.youtube.com">
+                <img src="./img/covers/providence.png" alt="">
+            </a>
+    
+            <a href="https://www.youtube.com">
+                <img src="./img/covers/vs.png" alt="">
+            </a>
+    
+            <a href="https://www.youtube.com">
+                <img src="./img/covers/waterloo.png" alt="">
+            </a>
+    
+            <a href="https://www.youtube.com">
+                <img src="./img/covers/bleach.png" alt="">
+            </a>
+        </div>
+        <p>
+            And more...
+
+            <a href="https://youtube.com" target="_blank">
+                <br>View All
+            </a>
+        </p>
+    </div>
+    
 
     <div class="sectionImgText sectionGrid">
         <img src="./img/life/sylwesterussy.jpg" alt="">
@@ -51,33 +96,138 @@
 
 
 
+    <div id="carouselSpacer">
+        <section class="slider-wrapper">
 
-    <section class="slider-wrapper">
-        <button class="slide-arrow" id="slide-arrow-prev">
-          <
-        </button>
-        <button class="slide-arrow" id="slide-arrow-next">
-          &#8250;
-        </button>
-        <ul class="slides-container" id="slides-container">
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-        </ul>
-      </section>
-      
-
-    <div class="sectionImgText sectionGridReverse">
-        <div class="sectionText">
-            <header>mx camera bike</header>
-            <p>
-                Kieran's passion extends beyond the screen to the creation of custom bikes. Meticulously crafted and infused with adrenaline, each custom bike is a testament to his dedication to the world of motorcycles. Experience the fusion of performance and artistry.
-            </p>
-        </div>
-        <img src="./img/life/isis.jpg" alt="">
+            <ul class="slides-container" id="slides-container">
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            </ul>
+        </section>
+    
     </div>
 
+    <div class="sectionTextWide">
+        <section class="collectionListLeft">
+            <header>
+                My collection
+            </header>
+            <img id="albumPreview" class="hiddenOpacity" src="./img/covers-irl/~.png" alt="Okładka albumu">
+        </section>
+        <section id="albumList" class="collectionListRight">
 
+            <div class="albumMarker textGray" data-cover="bleach">
+                Bleach
+            </div>
+
+            <div class="albumMarker textGray" data-cover="blue">
+                Blue
+            </div>
+
+            <div class="albumMarker textGray" data-cover="foofighters">
+                Foo Fighters
+            </div>
+
+            <div class="albumMarker textGray" data-cover="fragile">
+                The Fragile
+            </div>
+
+            <div class="albumMarker textGray" data-cover="colourandshape">
+                The Colour and the Shape
+            </div>
+
+            <div class="albumMarker textGray" data-cover="green">
+                Green
+            </div>
+
+            <div class="albumMarker textGray" data-cover="Incesticide">
+                Incesticide
+            </div>
+            
+            <div class="albumMarker textGray" data-cover="laststand">
+                The Last Stand
+            </div>
+
+            <div class="albumMarker textGray" data-cover="nirvanaunplugged">
+                MTV Unplugged - Live in NY
+            </div>
+
+            <div class="albumMarker textGray" data-cover="pinkerton">
+                Pinkerton
+            </div>
+
+            <div class="albumMarker textGray" data-cover="ross">
+                Ross
+            </div>
+
+            <div class="albumMarker textGray" data-cover="ten">
+                Ten
+            </div>
+
+            <div class="albumMarker textGray" data-cover="toczegopragniesz">
+                To, Czego Pragniesz
+            </div>
+        </section>
+    </div>
+
+    <div class="contact">
+        <header>
+            Get in touch
+        </header>
+
+        <form method="GET" action="#">
+
+            <section class="inputSection">
+                <label for="email">E-mail</label>
+
+                <input type="email" name="email" id="inputEmail">
+            </section>
+
+
+            <section class="inputSection">
+                <label for="email">Organisation</label>
+
+                <input type="text" name="email" id="inputOrganisation">
+            </section>
+
+            <section class="inputSection">
+                <label for="textarea">Message</label>
+                <textarea name="textarea" id="inputTextarea"></textarea>
+            </section>
+
+            <section class="inputSection">
+                <input type="submit" value="Submit">
+            </section>
+
+        </form>
+    </div>
+
+    <footer>
+        <header class="footerHeader">
+            Links
+        </header>
+
+        <section class="footerSection">
+            <a href="">YouTube</a>
+            <a href="">LinkedIn</a>
+            <a href="">Spotify</a>
+            <a href="">Facebook</a>
+        </section>
+
+        <section class="sectionCopyright">
+            Przemyslaw Smyczyk 2024 &copy;
+        </section>
+    </footer>
+<!-- 
+    <div class="sectionImgText sectionGrid">
+        <img src="./img/life/poolszymon.jpg" alt="">
+        <div class="sectionText">
+            <header>mx camera bike</header>
+            <p>Designed to capture dynamic shots with precision and agility, this cutting-edge camera bike redefines the art of cinematography.</p>
+        </div>
+
+    </div> -->
 </body>
 </html>

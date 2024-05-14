@@ -29,7 +29,13 @@
 
 body, html{
     margin: 0;
+    background-color: #666;;
 
+    max-width: 100%;
+}
+
+video{
+  pointer-events: none;
 }
 
 .videoPreview{
@@ -134,9 +140,62 @@ body, html{
     aspect-ratio: 1/1;
 }
 
+.imgGridWrapper{
+  padding-top: 5vw;
+  background-color: #000;
+
+  width: 100VW;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+
+}
+
+.imgGridWrapper > header{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 6.6vw;
+  font-weight: 500;
+  padding-right: 19vw;
+}
+
+.imgGridWrapper > p{
+  font-size: 7vw;
+  justify-self: center;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  margin: 6vw;
+  a{
+    font-size: 3vw;
+    color: #fff;
+  }
+}
+
+.sectionImgGrid{
+
+  padding: 1vw;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1vw;
+}
+
+.sectionImgGrid > a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionImgGrid > a > img{
+  width: 100%;
+}
 
 .slider-wrapper {
-    position: relative;
+    width: 99.1%;
+    position: sticky;
+    top: 0;
     overflow: hidden;
   }
   
@@ -154,65 +213,294 @@ body, html{
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
 
   }
+
+#carouselSpacer{
+  width: 100vw;
+  height: 1000px;
+}
+
+.sectionTextWide{
+  width: 100%;
+  background-color: #000;
+  padding-top: 4vw;
+  padding-left: 5vw;
+  padding-bottom: 4vw;
+  display: flex;
+  justify-content: space-between;
+}
+.collectionListLeft{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.collectionListLeft > header{
+  font-size: 4.5vw;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.collectionListLeft > img{
+  width: 60%;
+  aspect-ratio: 1/1;
+  align-self: center;
+  margin-top: 3.5vw;
+
+  transition: .2s;
+
+}
+
+.collectionListRight{
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: .5vw;
+}
+
+.collectionListRight > div{
+  font-weight: 400;
+  font-size: 2vw;
+  width: fit-content;
+  padding: 0 .4vw 0 .4vw;
+
+
+  background-color: #222;
+
+  transition: .2s;
+
+
+ &:hover{
+  color: #999999;
+  cursor: pointer;
+ } 
+}
+
+.hiddenOpacity{
+  opacity: 0;
+}
+
+.textWhite{
+  color: #fff;
+
+  &:hover{ 
+    color: #fff !important
+  }
+}
+
+.textGray{
+  color: #666;
+}
+
+.contact{
+  width: 100%;
+  /* background-color: #666; */
+  background:         linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ), url("./img/life/note.jpg");
+
+  display: flex;
+  padding-top: 4vw;
+  flex-direction: column;
+
+
+}
+
+.contact > header{
+  color: #fff;
+  font-size: 7vw;
+  font-weight: 400;
+  width: fit-content;
+
+  margin-left: 15vw;
+
+  text-transform: uppercase;
+}
+
+input[type="text"], input[type="email"], textarea{
+
+  background-color: #88888888;
+
+  outline: none;
+  border: none;
   
-  .slide-arrow {
-    position: absolute;
-    display: flex;
+  width: 100%;
+  height: 3vw;
 
-    top: calc(50% - 5rem);
+  transition: .2s;
 
-    bottom: 0;
-    height: 10rem;
-    background-color: white;
-    border: none;
-    width: 4rem;
-    font-size: 3rem;
-    padding: 0;
+  &:focus{
+    background-color: #fff;
+  }
+
+  border: 2px solid #7a7a7a;
+
+  font-size: 2vw;
+}
+
+
+
+input[type="submit"]{
+  border: none;
+  outline: none;
+  transition: .2s;
+  background-color: #666;
+  color: #fff;
+  border: 2px solid #7a7a7a;
+
+  align-self: center;
+  height: 3vw;
+  width: 60%;
+  font-size: 2vw;
+
+  &:hover{
+    background-color: #aaa;
     cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 100ms;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
+}
+
+label{
+  color: #fff;
+  font-size: 3vw;
+
+}
+
+.inputSection{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact > form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 57%;
+
+  align-self: flex-end;
+
+  padding: 3vw;
+
+
+  gap: 3vw;
+}
+
+
+textarea{
+  resize: none;
+  font-size: 1vw;
+  height: 100%;
+}
+
+.inputSection:has(textarea){
+  height: 10vw;
+}
+
   
-  .slide-arrow:hover,
-  .slide-arrow:focus {
-    opacity: 1;
-  }
+.slide{
+  height: 100%;
+  flex: 1 0 100%;
+
+}
+
+.slide:nth-child(1){
+  background:         linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ), url("./img/life/bleachliner.jpg");
+}
+
+.slide:nth-child(1){
+  background:         linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ), url("./img/life/bleachliner.jpg");
+}
+
+.slide:nth-child(3){
+  background:         linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ), url("./img/life/pinkertonbooklet.jpg");
+}
+
+.slide:nth-child(1){
+  background:         linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ), url("./img/life/bleachliner.jpg");
+}
+
+footer{
+
+  position: relative;
+
+  height: 100vh;
+
+  background:         linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ), url("./img/life/poolstasiu.jpg");
+
+
   
-  #slide-arrow-prev {
-    left: 0;
-    padding-left: 0.25rem;
-    border-radius: 0 2rem 2rem 0;
+  display: flex;
+
+  flex-direction: row;
+
+  flex-wrap: wrap;
+
+  padding: 2vw;
+
+}
+
+.footerHeader{
+  color: #fff;
+  font-size: 4.5vw;
+  text-transform: uppercase;
+  width: 100%;
+
+  text-align: end;
+  height: fit-content;
+
+}
+
+.footerSection{
+
+  margin-top: -6vw;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+
+  a{
+    text-decoration: none;
+
+    padding: .2vw;
+
+    font-size: 1.7vw;
+    background-color: #222;
+    color: #666;
+
+    transition: .2s;
+
+    width: fit-content;
+    height: fit-content;
+
+    &:hover{
+      color: #fff;
+    }
   }
-  
-  #slide-arrow-next {
-    right: 0;
-    padding-left: 0.75rem;
-    border-radius: 2rem 0 0 2rem;
-  }
-  
-  .slide {
-    width: 100%;
-    height: 100%;
-    flex: 1 0 100%;
-  }
-  
-  .slide:nth-child(1) {
-    background-color: #49b293;
-  }
-  
-  .slide:nth-child(2) {
-    background-color: #b03532;
-  }
-  
-  .slide:nth-child(3) {
-    background-color: #6a478f;
-    margin: 0;
-  }
-  
-  .slide:nth-child(4) {
-    background-color: #da6f2b;
-  }
+}
+
+.sectionCopyright{
+  position: absolute;
+  bottom: 2vw;
+
+  width: 100%;
+  color: #fff;
+  text-align: center;
+
+  justify-self: flex-end;
+}
