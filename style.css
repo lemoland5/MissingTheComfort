@@ -36,6 +36,7 @@ body, html{
 
 video{
   pointer-events: none;
+  opacity: .8;
 }
 
 .videoPreview{
@@ -182,6 +183,7 @@ video{
   grid-gap: 1vw;
 }
 
+
 .sectionImgGrid > a{
   display: flex;
   justify-content: center;
@@ -191,6 +193,7 @@ video{
 .sectionImgGrid > a > img{
   width: 100%;
 }
+
 
 .slider-wrapper {
     width: 99.1%;
@@ -232,6 +235,7 @@ video{
   width: 45%;
   display: flex;
   flex-direction: column;
+  gap: 13.5%;
 }
 
 .collectionListLeft > header{
@@ -242,10 +246,10 @@ video{
 }
 
 .collectionListLeft > img{
-  width: 60%;
+  width: 75%;
   aspect-ratio: 1/1;
   align-self: center;
-  margin-top: 3.5vw;
+  margin-top: 2vw;
 
   transition: .2s;
 
@@ -255,7 +259,8 @@ video{
   width: 35%;
   display: flex;
   flex-direction: column;
-  gap: .5vw;
+  height: 90%;
+  gap: 1vw;
 }
 
 .collectionListRight > div{
@@ -294,6 +299,7 @@ video{
 
 .contact{
   width: 100%;
+  min-height: 100vh;
   /* background-color: #666; */
   background:         linear-gradient(
     rgba(0, 0, 0, 0.7), 
@@ -331,7 +337,7 @@ input[type="text"], input[type="email"], textarea{
   transition: .2s;
 
   &:focus{
-    background-color: #fff;
+    background-color: #ffffffaa;
   }
 
   border: 2px solid #7a7a7a;
@@ -388,13 +394,13 @@ label{
 }
 
 
-textarea{
+#inputTextarea{
   resize: none;
   font-size: 1vw;
   height: 100%;
 }
 
-.inputSection:has(textarea){
+.inputSection:has(#inputTextarea){
   height: 10vw;
 }
 
@@ -402,7 +408,15 @@ textarea{
 .slide{
   height: 100%;
   flex: 1 0 100%;
+  display: flex;
 
+  padding: 2vw;
+
+
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
 }
 
 .slide:nth-child(1){
@@ -412,11 +426,13 @@ textarea{
   ), url("./img/life/bleachliner.jpg");
 }
 
-.slide:nth-child(1){
+.slide:nth-child(2){
   background:         linear-gradient(
     rgba(0, 0, 0, 0.7), 
     rgba(0, 0, 0, 0.7)
-  ), url("./img/life/bleachliner.jpg");
+  ), url("./img/covers/downwardspiral.png");
+  background-repeat:no-repeat;
+  background-size: cover;
 }
 
 .slide:nth-child(3){
@@ -426,11 +442,99 @@ textarea{
   ), url("./img/life/pinkertonbooklet.jpg");
 }
 
-.slide:nth-child(1){
+.slide:nth-child(4){
   background:         linear-gradient(
     rgba(0, 0, 0, 0.7), 
     rgba(0, 0, 0, 0.7)
-  ), url("./img/life/bleachliner.jpg");
+  ), url("./img/covers/vsalt.png");
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+.gridSlideHeader{
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1.3fr 1fr;
+}
+
+.gridSlideBody{
+  display: grid;
+  width: 100%;
+  height: 90%;
+  grid-template-columns: repeat(1fr);
+
+  table{
+    height: 85%;
+  }
+}
+
+.slideHeader{
+  color: #fff;
+  font-size: 7vw;
+  font-weight: 500;
+  width: 100%;
+
+}
+
+.slideRight{
+  width: 70%;
+  padding: 1vw 0 0 2.5vw;
+}
+
+.slideLeft{
+  width: 25%;
+}
+
+table{
+  width: 100%;
+  height: 100%;
+}
+
+td{
+  color: #fff;
+  position: relative;
+
+  font-size: 1.15vw;
+
+  padding-top: 2vw;
+
+  img{
+    aspect-ratio: 1/1;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+}
+
+tr:has(th){
+  height: 3vw;
+}
+
+tr:nth-child(2n){
+  background-color: #66666633;
+}
+
+tr:nth-child(2n+1){
+  background-color: #00000033;
+}
+
+td, th{
+  width: 33%;
+  text-align: center;
+}
+
+th{
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5vw;
+  text-align: center;
+  font-style: italic;
 }
 
 footer{
@@ -442,7 +546,10 @@ footer{
   background:         linear-gradient(
     rgba(0, 0, 0, 0.7), 
     rgba(0, 0, 0, 0.7)
-  ), url("./img/life/poolstasiu.jpg");
+  ), url("./img/life/poolmaksiu.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
 
 
   
@@ -464,6 +571,8 @@ footer{
 
   text-align: end;
   height: fit-content;
+
+  margin-right: 2vw;
 
 }
 
