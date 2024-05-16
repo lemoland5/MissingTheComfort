@@ -31,18 +31,27 @@
     }
 
     #collection{
-        height: 64vh;
+        min-height: fit-content;
 
         .collectionListRight{
             width: 45%;
             div{
                 font-size: 3vw;
             }
+
         }
     }
 
     .slider-wrapper{
-        position: relative;
+        display: inline;
+    }
+
+    .slides-container{
+        height: fit-content;
+    }
+
+    div#carouselSpacer{
+        height: fit-content;
     }
 
 }
@@ -62,7 +71,7 @@
     }
 
     #collection{
-        height: 70vh;
+        height: fit-content;
     }
 
     .slides-container{
@@ -142,9 +151,6 @@
                 height: 6vw;
             }
 
-            #inputTextarea{
-                height: 12vw;
-            }
 
 
             input[type="submit"]{
@@ -166,8 +172,12 @@
         }
     }
 
+    .collectionListLeft{
+        gap: 15%;
+    }
+
     .footerHeader{
-        font-size: 6vw;
+        font-size: 8vw;
         width: 100%;
         text-align: center;
 
@@ -176,27 +186,26 @@
 
     .footerSection{
         flex-direction: column;
-        margin-top: 17vw;
+        margin-top: 10vw;
 
         position: absolute;
 
-        height: 80%;
+        height: 73%;
         width: 100%;
 
         align-items: center;
 
+
         a{
             color: #aaaaaaff;
-            font-size: 5vw;
+            font-size: 4vw;
         }
     }
-    
-}
 
-@media (max-width: 720px){
-    #collection{
-        height: 60vh;
+    .sectionCopyright{
+        font-size: 1.5vw;
     }
+    
 }
 
 @media (max-width: 600px){
@@ -240,30 +249,36 @@
             }
         }
     }
+
+    .sectionCopyright{
+        font-size: 3vw;
+    }
 }
 
 @media (max-width: 440px){
     .sectionTextHigh{
+
+        padding: 5vw 0 0 10vw;
         height: 40vh;
 
         header{
             width: 75vw;
-            font-size: 6vw;
+            font-size: 3.2vw;
         }
 
         p{
-            font-size: 2vw;
-            width: 45%;
+            font-size: 2.3vw;
+            width: 50%;
         }
 
         img{
             left: 70%;
-            top: 60%;
+            top: 50%;
         }
     }
 
     #collection{
-        height: 50vh;
+        min-height: fit-content;
 
         .collectionListRight{
             
@@ -276,6 +291,13 @@
             img{
                 width: 85%;
             };
+        }
+    }
+
+    .footerSection{
+        height: 85%;
+        a{
+            font-size: 7vw;
         }
     }
 }

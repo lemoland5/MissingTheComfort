@@ -26,6 +26,13 @@
     scroll-behavior: smooth;
 }
   
+i{
+  font-weight: 500;
+}
+
+.lowOpacity{
+  opacity: .8;
+}
 
 body, html{
     margin: 0;
@@ -41,10 +48,37 @@ video{
 
 .videoPreview{
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     display: flex;
+
+    position: relative;
     justify-content: center;
     background-color: #000;
+}
+
+.videoHeader{
+  position: absolute;
+  color: #fff;
+  z-index: 10;
+
+  width: 100%;
+  text-align: center;
+
+  text-transform: uppercase;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  h1{
+    padding: 0;
+    margin: 0;
+
+    font-weight: 400;
+
+    font-size: 5vw;
+  }
 }
 
 .sectionGrid{
@@ -218,8 +252,11 @@ video{
   }
 
 #carouselSpacer{
-  width: 100vw;
-  height: 1000px;
+  height: 10px;
+}
+
+#collection{
+  max-height: 100vh;
 }
 
 .sectionTextWide{
@@ -235,7 +272,7 @@ video{
   width: 45%;
   display: flex;
   flex-direction: column;
-  gap: 13.5%;
+  gap: 0%;
 }
 
 .collectionListLeft > header{
@@ -260,7 +297,7 @@ video{
   display: flex;
   flex-direction: column;
   height: 90%;
-  gap: 1vw;
+  gap: .6vw;
 }
 
 .collectionListRight > div{
@@ -359,6 +396,8 @@ input[type="submit"]{
   height: 3vw;
   width: 60%;
   font-size: 2vw;
+  margin-top: 7vw;
+  margin-bottom: 7vw;
 
   &:hover{
     background-color: #aaa;
@@ -395,9 +434,12 @@ label{
 
 
 #inputTextarea{
-  resize: none;
+  /* resize: none; */
   font-size: 1vw;
   height: 100%;
+
+  
+  min-height: 12vw;
 }
 
 .inputSection:has(#inputTextarea){
@@ -410,7 +452,7 @@ label{
   flex: 1 0 100%;
   display: flex;
 
-  padding: 2vw;
+  padding: 4vw;
 
 
 
@@ -559,8 +601,7 @@ footer{
 
   flex-wrap: wrap;
 
-  padding: 2vw;
-
+  padding-top: 3vw;
 }
 
 .footerHeader{
@@ -572,13 +613,13 @@ footer{
   text-align: end;
   height: fit-content;
 
-  margin-right: 2vw;
+  margin-right: 5vw;
 
 }
 
 .footerSection{
 
-  margin-top: -6vw;
+  margin-top: -4vw;
   width: 100%;
   justify-content: space-around;
   display: flex;
