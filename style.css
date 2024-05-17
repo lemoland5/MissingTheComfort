@@ -26,6 +26,35 @@
     scroll-behavior: smooth;
 }
   
+nav{
+  width: 100vw;
+  height: 5vh;
+  background-color: #00000033;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  padding: 1vw;
+  
+  a{
+    text-decoration: none;
+    font-size: 2vw;
+
+    color: #aaa;
+
+    transition: .2s;
+
+    &:hover{
+      color: #fff;
+    }
+  }
+
+}
+
 i{
   font-weight: 500;
 }
