@@ -209,6 +209,11 @@
 }
 
 @media (max-width: 600px){
+
+    nav > a{
+        font-size: 2.6vw;
+    }
+
     .sectionGrid{
 
         height: fit-content;
@@ -252,6 +257,10 @@
 
     .sectionCopyright{
         font-size: 3vw;
+    }
+
+    #contact{
+        min-height: 50vh;
     }
 }
 
@@ -300,4 +309,10 @@
             font-size: 7vw;
         }
     }
+}
+
+@media (max-width: 400px) {
+    nav{
+        display: none;
+    }   
 }
